@@ -1,0 +1,101 @@
+<!--
+author: W3layouts
+author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+	<script language="javascript" type="text/javascript">
+	window.onload=function(){
+			var envia = document.getElementById("Bcontraseña");
+			envia.onclick=function(){
+				
+				if(correo.value=="" || contraseña.value==""){
+					alert("Complete los campos obligatorios");
+				}else{
+					event.preventDefault();
+					location.href = "index.html";			
+				}
+			}
+		}
+	</script>
+	
+<head>
+<title>CIA. VIRCAR S.A. Login</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<meta name="keywords" content="Taxi Drive Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script src="https://kit.fontawesome.com/b1dad47d59.js" crossorigin="anonymous"></script>
+    <script>
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
+
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
+    </script>
+	
+	<!-- css files -->
+    <link href="css/bootstrap.css" rel='stylesheet' type='text/css' /><!-- bootstrap css -->
+    <link href="css/style.css" rel='stylesheet' type='text/css' /><!-- custom css -->
+    <link href="css/font-awesome.min.css" rel="stylesheet"><!-- fontawesome css -->
+	<!-- //css files -->
+	
+	<!-- google fonts -->
+	<link href="//fonts.googleapis.com/css?family=Rosario:400,400i,700,700i" rel="stylesheet">
+	<!-- //google fonts -->
+	
+</head>
+<body>
+<!-- //header -->
+<header>
+	<div class="container">
+		<!-- nav -->
+		<nav class="py-sm-4 py-3 d-lg-flex">
+			<div id="logo">
+				<h1> <a href="index.html"><i class="fas fa-truck-pickup"></i>CIA. VIRCAR S.A.</a></h1>
+			</div>
+			<label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
+			<input type="checkbox" id="drop" />
+			<ul class="menu mt-md-2 ml-auto">
+				<li class="mr-lg-4 mr-2 active"><a href="index.html">Home</a></li>
+			</ul>
+		</nav>
+		<!-- //nav -->
+	</div>
+</header>
+<!-- //header -->
+		
+<!-- banner -->
+<section class="banner w3pvt-banner" id="home">
+	<div class="container">
+		<div class="banner-text">
+			<div class="slider-info">
+				<div class="w3pvt-logo">
+					<div class="bottom-content">
+						<h2>Login</h2>
+						<img src="images/Imagen/New Project (8).png" alt="" class="img-fluid mt-md-5"/>
+							<form action="#" method="post">
+								<input type="email" id="correo" name="email" class="input-form" placeholder="Correo"
+										required="required" />
+								<input type="password" name="password" id="Bcontraseña" input-form"
+										placeholder="Contraseña" required="required" />
+								<button type="submit" class="loginhny-btn btn">Login</button>
+							</form>
+							<h8>No eres miembro? <a href="Registrate.html">Registrate!</a></h8>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- //banner -->
+
+
+
+</body>
+</html>
