@@ -9,6 +9,7 @@
 			$sql = "select * from usuario where correo_cli ='$user' and clave_cli='$pass'";
 			$r = mysqli_query($l,$sql) or die("El usuario o contraseña es incorrecto");
 			$n = mysqli_num_rows($r);
+			header("location:Mapa.html");
 		}
 	}
 ?>
