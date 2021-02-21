@@ -1,15 +1,23 @@
 <?php
+session_start();
 	require "conex.php";
-	if(isset($_POST["email"]) && isset($_POST["password"])){
-		$user = $_POST["email"];
-		$pass = $_POST["password"];
+	if(isset($_POST["correo"]) && isset($_POST["clave"])){
+		$user = $_POST["correo"];
+		$pass = $_POST["clave"];
 		if($user=="" || $pass==""){
 			print("Debe ingresar los datos requeridos");
 		}else{
-			$sql = "select * from usuario where correo_cli ='$user' and clave_cli='$pass'";
-			$r = mysqli_query($l,$sql) or die("El usuario o contraseña es incorrecto");
+			$sql = "select * from cliente where correo_cli='$user' and clave_cli='$pass'";
+			$r = mysqli_query($l,$sql);
 			$n = mysqli_num_rows($r);
-			header("location:Mapa.html");
+			if($n==1){
+				$_SESSION['cod_cli'] = $user;
+				header("location:../Mapa2.php");
+			}else{
+				print("Hola");
+				header("location:../Login.html");
+			}
+			
 		}
 	}
 ?>
