@@ -76,7 +76,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 							
 							<input placeholder="Destino" type="text" required name="destino">
 							<select name="carrito">
-								<form>
 									<option value="0">Seleccione el tipo de vehiculo</option>
 									<?php
 									require("php/conex.php");
@@ -89,10 +88,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 									}
 									echo "</opcion>";
 									?>
-								</form>
 							</select>
 							<input placeholder="Lugar de inicio" type="text" required name="referencia">
-							<!--<input placeholder="Password" name="password" type="password" required=""> -->
 							<button class="book-btn btn">Enviar</button>
 						</div>
 					</form>
@@ -107,11 +104,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 						<h5 class="mb-3">Datos de usuario</h5>
 						<div class="form-style-agile">
 							<?php
-  								session_start();
   								require "php/conex.php";
-  								if(isset($_SESSION['cod_cli'])){
-    								$user= $_SESSION['cod_cli'];
-    								$sql="select * from cliente where correo_cli = '$user'";
+									$user1 = $_GET["corre"];
+    								$sql="select * from cliente where correo_cli = '$user1'";
     								$r=mysqli_query($l,$sql);
     								while($registro = mysqli_fetch_object($r)){
 										$cedula = $registro -> cod_cli;
@@ -121,7 +116,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 										print("<input placeholder='$nombre' type='text' required name='Nombre' readonly>");
 										print("<input placeholder='$apellido' type='text' required name='Apellido' readonly>");
 									}
-  								}
 							?>
 						</div>
 					</form>

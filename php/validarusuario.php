@@ -12,12 +12,10 @@ session_start();
 			$n = mysqli_num_rows($r);
 			if($n==1){
 				$_SESSION['cod_cli'] = $user;
-				header("location:../Mapa2.php");
+				header("location:../Mapa2.php?corre=".urlencode($user));
 			}else{
-				print("Hola");
 				header("location:../Login.html");
 			}
-			
 		}
 	}
 ?>
